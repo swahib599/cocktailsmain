@@ -6,7 +6,7 @@ import RandomCocktail from "./components/RandomSelection";
 import Login from "./components/UserLogin";
 import Register from "./components/Register";
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5000';
+const API_URL = process.env.REACT_APP_API_URL || 'https://cocktail-combined.onrender.com';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

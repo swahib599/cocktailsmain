@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import SearchBar from './SearchBar';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5000';
+const API_URL = process.env.REACT_APP_API_URL || 'https://cocktail-combined.onrender.com';
 
 const RandomCocktail = ({ isLoggedIn }) => {
   const [cocktails, setCocktails] = useState([]);
@@ -144,6 +144,14 @@ const RandomCocktail = ({ isLoggedIn }) => {
               <img src={`${API_URL}${cocktail.image_url}`} alt={cocktail.name} style={styles.cocktailImage}/>
               <h3 style={styles.cocktailTitle}>{cocktail.name}</h3>
               <p>Glass: {cocktail.glass_type}</p>
+              <h4>Ingredients:</h4>
+              <ul style={styles.ingredientList}>
+              {cocktail.ingredients.map((ingredient, index) => (
+                <li key={index}>{ingredient.amount} {ingredient.name}</li>
+              ))}
+              </ul>
+              <h4>Instructions:</h4>
+              <p>{cocktail.instructions}</p>
               <div style={styles.buttonContainer}>
                 <button onClick={() => handleLike(cocktail.id)} style={styles.likeButton}>👍🏾</button>
                 <button onClick={() => handleDislike(cocktail.id)} style={styles.dislikeButton}>👎🏾</button>
