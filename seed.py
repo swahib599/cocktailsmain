@@ -1,5 +1,5 @@
 import logging
-from server.app import create_app, db
+from app import create_app, db
 from models import User, Cocktail, Ingredient, CocktailIngredient, Review
 
 logging.basicConfig(level=logging.INFO)
