@@ -1,7 +1,7 @@
 {
   "name": "cocktail-app",
   "version": "1.0.0",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://cocktail-combined.onrender.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
