@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import SearchBar from './SearchBar';
 
-const API_URL = process.env.REACT_APP_API_URL || 'https://cocktail-combined.onrender.com';
+import { API_URL } from '../config';
 
 const RandomCocktail = ({ isLoggedIn }) => {
   const [cocktails, setCocktails] = useState([]);
