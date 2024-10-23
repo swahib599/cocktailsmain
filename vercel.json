@@ -1,15 +1,24 @@
 {
-    "rewrites": [
+    "routes": [
       {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ],
-    "builds": [
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+      },
       {
-        "src": "package.json",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "build" }
+        "src": "/favicon.ico",
+        "dest": "/favicon.ico"
+      },
+      {
+        "src": "/manifest.json",
+        "dest": "/manifest.json"
+      },
+      {
+        "src": "/logo192.png",
+        "dest": "/logo192.png"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
       }
     ],
     "env": {

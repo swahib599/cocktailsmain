@@ -1,12 +1,12 @@
 {
   "name": "cocktail-app",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "vercel-build": "react-scripts build"
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "axios": "^1.7.7",
